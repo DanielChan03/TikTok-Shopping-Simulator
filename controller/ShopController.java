@@ -19,7 +19,6 @@ public class ShopController {
         this.model = model;
         this.userDatabase = new HashMap<String, User>();
         initializeDemoUsers();  // add demo users
-        // model.initializeProductCatalog();
         showLoginView();
     }
 
