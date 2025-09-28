@@ -311,17 +311,10 @@ public class MainShopView extends JFrame {
     infoPanel.add(mainContentPanel, BorderLayout.CENTER);  // Name and price in center
     infoPanel.add(sellerPanel, BorderLayout.SOUTH);        // Seller at bottom right
         
-    // Add to cart button
-    // JButton addButton = new JButton(ADD_ICON + " Add to Cart");
-    // addButton.setBackground(new Color(70, 130, 180));
-    // addButton.setForeground(Color.WHITE);
-
     // Store reference to the ORIGINAL product from the catalog
 
     Product originalProduct = product;
     JButton addButton = new JButton(ADD_ICON + " Add to Cart");
-
-    // updateProductCardButton(card, originalProduct);
 
     if (originalProduct.getStock() <= 0) {
         // Out of Stock button (disabled)
@@ -466,11 +459,9 @@ public class MainShopView extends JFrame {
         removeBtn.addActionListener(e -> removeItemFromCart());
         checkoutBtn.addActionListener(e -> checkout());
         voucherBtn.addActionListener(e -> applyVoucher());
-        // removeVoucherBtn.addActionListener(e -> removeVoucher());
 
         buttonPanel.add(removeBtn);
         buttonPanel.add(voucherBtn);
-        // buttonPanel.add(removeVoucherBtn);
         buttonPanel.add(checkoutBtn);
         
 
